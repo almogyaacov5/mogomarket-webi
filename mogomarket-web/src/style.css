@@ -89,11 +89,3 @@ body {
   .who { display: none; }
   .chartwrap { min-height: 360px; }
 }
-
-.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 4px 0 12px; }
-.card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 12px 14px; }
-.card-v { font-size: 22px; font-weight: 800; margin-top: 4px; font-variant-numeric: tabular-nums; }
-.insights { max-height: 60vh; overflow: auto; }
-.insights h4 { margin: 14px 0 2px; color: var(--accent); }
-.modal:has(.insights) { width: min(640px, 94vw); }
-@media (max-width: 640px) { .table { font-size: 13px; } .table th, .table td { padding: 8px 5px; } }

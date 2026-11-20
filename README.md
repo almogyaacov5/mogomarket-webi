@@ -7,8 +7,12 @@ account, watchlist and price alerts work on the web and on the phone.
 1 week (including 65 / 90 minutes, 2h, 4h), volume, MA 20/50/200, Bollinger Bands, RSI and MACD panes,
 drawing tools (horizontal line, trend line, Fibonacci), price alerts from the chart, and the watchlist.
 
-Coming in the next stages: portfolio and trading journal, the paper-trading simulator with challenges
-and leaderboard, CSV export, AI trade analysis, installable-app polish.
+**Stage 2:** portfolio (open trades with live P/L, cash, buy / edit / close with the same Firebase
+transactions as the Android app) and trading journal (closed trades, stats, mood / strategy / sector
+insights, notes editing, CSV export).
+
+Coming in the next stages: the paper-trading simulator with challenges
+and leaderboard, AI trade analysis, installable-app polish.
 
 ## Run it locally
 
@@ -33,7 +37,7 @@ Open the address Vite prints. In development `/api/yahoo/*` and `/api/binance/*`
 - **Web API key:** `src/firebase-config.ts` holds the project's public web configuration. If sign-in
   fails with "API key not valid" or a referrer error, the key is restricted to Android. Register a Web
   app (Project settings, Your apps, Web) and paste its config into that file.
-- **Rules:** the app reads and writes `users/{uid}/watchlist-stocks`. Your Realtime Database rules
+- **Rules:** the app reads and writes `users/{uid}/watchlist-stocks`, `portfolio-stocks`, `portfolio-cash`, `closed-trades` and `daily-trade-events`. Your Realtime Database rules
   should only let a signed-in user access their own `users/{uid}` node.
 
 ## Notes
